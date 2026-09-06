@@ -9,7 +9,7 @@ pipeline {
       stage("build"){
           steps{
               echo 'compiling sysfoo app...'
-              bat 'maven compile'
+              sh 'maven compile'
           }
       }
       stage("test"){
