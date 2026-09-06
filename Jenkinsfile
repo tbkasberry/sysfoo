@@ -15,7 +15,7 @@ pipeline {
       stage("test"){
           steps{
               echo 'running tests on sysfoo app...'
-              bat 'maven clean test'
+              sh 'maven clean test'
           }
       }
       stage("package"){
