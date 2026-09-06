@@ -25,7 +25,7 @@ GIT_SHORT_COMMIT=$(echo $GIT_COMMIT | cut -c 1-7)
 mvn versions:set -DnewVersion="$GIT_SHORT_COMMIT"
 mvn versions:commit'''
         sh 'mvn package -DskipTests'
-        archiveArtifacts '**/target/*.jar`'
+        archiveArtifacts '**/target/*.jar'
       }
     }
 
