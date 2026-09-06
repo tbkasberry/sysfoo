@@ -15,13 +15,13 @@ pipeline {
       stage("test"){
           steps{
               echo 'running tests on sysfoo app...'
-              sh 'maven clean test'
+              sh 'mvn clean test'
           }
       }
       stage("package"){
           steps{
               echo 'packaging sysfoo app...'
-              bat 'maven package -DskipTests'
+              bat 'mvn package -DskipTests'
           }
       }
   }
